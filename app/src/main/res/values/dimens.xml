@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="view_margin_side">16dp</dimen>
+    <dimen name="view_margin_side_8">8dp</dimen>
+    <dimen name="view_padding_side">16dp</dimen>
+    <dimen name="bnv_elevation">8dp</dimen>
+
+</resources>
