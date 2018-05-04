@@ -38,6 +38,7 @@ public class HomeActivity extends BaseActivity {
             transaction.commit();
         }
         initView();
+
     }
 
     private void initView() {
