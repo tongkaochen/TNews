@@ -3,6 +3,7 @@
 
     <dimen name="view_margin_side">16dp</dimen>
     <dimen name="view_margin_side_8">8dp</dimen>
+    <dimen name="view_margin_side_4">4dp</dimen>
     <dimen name="view_padding_side">16dp</dimen>
     <dimen name="bnv_elevation">8dp</dimen>
 

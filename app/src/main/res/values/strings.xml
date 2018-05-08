@@ -10,4 +10,6 @@
     <string name="open_drawer_title">打开侧栏</string>
     <string name="close_drawer_title">关闭侧栏</string>
     <string name="search_title">搜索</string>
+    <string name="news_header_title">%s - %s - %s</string>
+    <string name="comment_title">评论</string>
 </resources>

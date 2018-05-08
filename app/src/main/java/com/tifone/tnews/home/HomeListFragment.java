@@ -8,6 +8,7 @@ import android.view.View;
 import com.tifone.tnews.R;
 import com.tifone.tnews.adapter.HomeRecyclerViewAdapter;
 import com.tifone.tnews.bean.home.HomeTestBean;
+import com.tifone.tnews.bean.news.MultiNewsArticleDataBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,9 +49,13 @@ public class HomeListFragment extends BaseHomeFragment {
 
     @Override
     protected void initViewData() {
-        List<HomeTestBean> list = new ArrayList<>();
-        mAdapter = new HomeRecyclerViewAdapter(list);
+        mAdapter = new HomeRecyclerViewAdapter(new ArrayList<MultiNewsArticleDataBean>());
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    @Override
+    protected void fetchData() {
+        mPresenter.loadData("news_hot");
     }
 
     @Override
@@ -60,11 +65,16 @@ public class HomeListFragment extends BaseHomeFragment {
 
     @Override
     public void showData(HomeTestBean targets) {
-        mAdapter.adapterDataSetInserted(targets);
+        //mAdapter.adapterDataSetInserted(targets);
     }
 
     @Override
     public void showEmpty() {
 
+    }
+
+    @Override
+    public void onSetAdapter(List<MultiNewsArticleDataBean> list) {
+        mAdapter.adapterDataSetInserted(list);
     }
 }

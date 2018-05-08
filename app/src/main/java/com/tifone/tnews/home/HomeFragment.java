@@ -60,6 +60,12 @@ public class HomeFragment extends BaseFragment {
         ViewPagerFragmentAdapter adapter = new ViewPagerFragmentAdapter(getFragmentManager(), mFragments);
         mViewPager.setAdapter(adapter);
     }
+
+    @Override
+    protected void fetchData() {
+
+    }
+
     private void initFragments() {
         mFragments.add(HomeListFragment.newInstance("头条"));
         mFragments.add(HomeListFragment.newInstance("新闻"));

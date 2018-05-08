@@ -23,6 +23,7 @@ public abstract class BaseFragment extends Fragment {
     protected abstract int inflaterViewId();
     protected abstract void initView(View root);
     protected abstract void initViewData();
+    protected abstract void fetchData();
 
     public static Bundle setupBundle(String name) {
         Bundle bundle = new Bundle();
@@ -38,5 +39,11 @@ public abstract class BaseFragment extends Fragment {
         initView(view);
         initViewData();
         return view;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        fetchData();
     }
 }

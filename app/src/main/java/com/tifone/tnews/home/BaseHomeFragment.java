@@ -27,9 +27,4 @@ public abstract class BaseHomeFragment extends BaseFragment implements IHomeView
         setPresenter(mPresenter);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mPresenter.loadData();
-    }
 }
