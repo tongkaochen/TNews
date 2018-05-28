@@ -6,4 +6,5 @@
     <color name="nav_layout_background">#53e5fc</color>
     <color name="white">#ffffff</color>
     <color name="gray">#939292</color>
+    <color name="image_bg_color">#d2d2d2</color>
 </resources>

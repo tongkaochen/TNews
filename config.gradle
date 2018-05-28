@@ -1,0 +1,44 @@
+ext {
+    myself = [
+            multi_feature_recycler_view_lib_version: "0.0.2"
+    ]
+    android = [
+            compile_sdk_version: 27,
+            build_tools_version: "27.0.3",
+            target_sdk_version : 27,
+            min_sdk_version    : 15,
+            version_code       : 201805281,
+            version_name       : "0.0.2"
+    ]
+
+    def versions = [
+            support  : "27.1.1",
+            rxjava   : "2.1.13",
+            rxandroid: "2.0.2",
+            retrofit : "2.4.0",
+            okhttp   : "3.10.0",
+            glide    : "4.6.1",
+
+    ]
+    dependencies = [
+            // support
+            "appcompat-v7"              : "com.android.support:appcompat-v7:${versions.support}",
+            "constraint-layout"         : "com.android.support.constraint:constraint-layout:1.1.0",
+            "design"                    : "com.android.support:design:${versions.support}",
+            "cardview-v7"               : "com.android.support:cardview-v7:${versions.support}",
+            "recyclerview-v7"           : "com.android.support:recyclerview-v7:${versions.support}",
+            // rx
+            "rxjava"                    : "io.reactivex.rxjava2:rxjava:${versions.rxjava}",
+            "rxandroid"                 : "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}",
+            // retrofit
+            "retrofit"                  : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            "retrofit-adapter-rxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+            "retrofit-converter-gson"   : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            // okhttp
+            "okhttp"                    : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+            "okhttp-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+            // glide
+            "glide"                     : "com.github.bumptech.glide:glide:${versions.glide}",
+            "glide-compiler"            : "com.github.bumptech.glide:compiler:${versions.glide}"
+    ]
+}
