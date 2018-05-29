@@ -1143,4 +1143,15 @@ public class MultiNewsArticleDataBean {
             this.name = name;
         }
     }
+
+    @Override
+    public int hashCode() {
+        return (int) item_id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        MultiNewsArticleDataBean bean = (MultiNewsArticleDataBean) obj;
+        return bean.getItem_id() == item_id && bean.hashCode() == hashCode();
+    }
 }

@@ -17,6 +17,7 @@ public interface IHomeContrast {
         void showData(HomeTestBean bean);
         void showEmpty();
         void onSetAdapter(List<MultiNewsArticleDataBean> list);
+        boolean isLoadLatest();
     }
     interface IHomePresenter extends IPresenter {
         void loadData(String... category);

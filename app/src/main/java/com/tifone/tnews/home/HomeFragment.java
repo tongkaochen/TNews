@@ -1,5 +1,6 @@
 package com.tifone.tnews.home;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -66,8 +67,13 @@ public class HomeFragment extends BaseFragment {
 
     }
 
+    @Override
+    public void forceRefresh() {
+        mFragments.get(mTabLayout.getSelectedTabPosition()).forceRefresh();
+    }
+
     private void initFragments() {
-        mFragments.add(HomeListFragment.newInstance("头条"));
+        /*mFragments.add(HomeListFragment.newInstance("头条"));
         mFragments.add(HomeListFragment.newInstance("新闻"));
         mFragments.add(HomeListFragment.newInstance("视频"));
         mFragments.add(HomeListFragment.newInstance("搞笑"));
@@ -75,7 +81,13 @@ public class HomeFragment extends BaseFragment {
         mFragments.add(HomeListFragment.newInstance("娱乐"));
         mFragments.add(HomeListFragment.newInstance("动漫"));
         mFragments.add(HomeListFragment.newInstance("影视"));
-        mFragments.add(HomeListFragment.newInstance("直播"));
+        mFragments.add(HomeListFragment.newInstance("直播"));*/
+        Resources res = getActivity().getResources();
+        String[] channelTitle = res.getStringArray(R.array.channel_info);
+        String[] channelId = res.getStringArray(R.array.channel_info_id);
+        for (int i = 0; i < channelId.length; i++) {
+            mFragments.add(HomeListFragment.newInstance(channelTitle[i], channelId[i]));
+        }
     }
 
     @Override

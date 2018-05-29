@@ -30,15 +30,17 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
 
     @Override
     public int setupItemViewType(int position) {
-        logger("======== position = "+ position);
         MultiNewsArticleDataBean bean = getItem(position);
-        if (bean != null && !bean.isHas_image() && !bean.isHas_video()) {
+        if (bean == null) {
+            return VIEW_TYPE_ONLY_TEXT;
+        }
+        if (!bean.isHas_image() && !bean.isHas_video()) {
             // text content
             return VIEW_TYPE_ONLY_TEXT;
-        } else if (bean != null && bean.isHas_image()) {
+        } else if (bean.isHas_image() && !bean.isHas_video()) {
             // with image content
             return VIEW_TYPE_WITH_IMAGE;
-        } else if (bean != null && bean.isHas_video()) {
+        } else if (bean.isHas_video()) {
             // with video content
             return VIEW_TYPE_WITH_VIDEO;
         }

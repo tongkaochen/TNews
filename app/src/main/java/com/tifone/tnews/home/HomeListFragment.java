@@ -11,6 +11,7 @@ import com.tifone.tnews.adapter.HomePagerViewAdapter;
 import com.tifone.tnews.bean.home.HomeTestBean;
 import com.tifone.tnews.bean.news.MultiNewsArticleDataBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,16 +20,25 @@ import java.util.List;
 
 public class HomeListFragment extends BaseHomeFragment implements PullLoadRecyclerView.OnRefreshListener, PullLoadRecyclerView.OnLoadListener {
 
+    private static final String CATEGORY_ID = "category_id";
     private PullLoadRecyclerView mRecyclerView;
     private HomePagerViewAdapter mAdapter;
-    private boolean isRefreshDataInserted;
-    private boolean isLoadDataInserted;
+    private boolean isRefreshDataStarted;
+    private boolean isLoadDataStarted;
+    private String mCategoryId;
 
-    public static HomeListFragment newInstance(String fragmentTitle) {
+    public static HomeListFragment newInstance(String fragmentTitle, String categoryId) {
         Bundle bundle = setupBundle(fragmentTitle);
+        bundle.putString(CATEGORY_ID, categoryId);
         HomeListFragment fragment = new HomeListFragment();
         fragment.setArguments(bundle);
         return fragment;
+    }
+    public HomeListFragment() {
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            mCategoryId = bundle.getString(CATEGORY_ID, "news_hot");
+        }
     }
 
     @Override
@@ -52,6 +62,7 @@ public class HomeListFragment extends BaseHomeFragment implements PullLoadRecycl
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setOnLoadListener(this);
         mRecyclerView.setOnRefreshListener(this);
+        mRecyclerView.setLoadMoreBehavior(PullLoadRecyclerView.LOAD_BEHAVIOR_STYLE_NORMAL);
     }
 
     @Override
@@ -60,7 +71,13 @@ public class HomeListFragment extends BaseHomeFragment implements PullLoadRecycl
 
     @Override
     protected void fetchData() {
-        mPresenter.loadData("news_hot");
+        mPresenter.loadData(mCategoryId);
+    }
+
+    @Override
+    public void forceRefresh() {
+        mRecyclerView.scrollToPosition(0);
+        mRecyclerView.notifyDoRefresh();
     }
 
     @Override
@@ -80,27 +97,31 @@ public class HomeListFragment extends BaseHomeFragment implements PullLoadRecycl
 
     @Override
     public void onSetAdapter(List<MultiNewsArticleDataBean> list) {
-        if (!isRefreshDataInserted) {
+        if (isRefreshDataStarted) {
             mRecyclerView.notifyRefreshCompleted();
-            isRefreshDataInserted = true;
+            isRefreshDataStarted = false;
         }
-        if (!isLoadDataInserted) {
+        if (isLoadDataStarted) {
             mRecyclerView.notifyLoadComplete();
-            isLoadDataInserted = true;
+            isLoadDataStarted = false;
         }
-        mAdapter.addDataSet(list);
-        Log.e("tifone", "onSetAdapter: " + list.size() + " itemcount = " + mAdapter.getItemCount());
+        mAdapter.setDataSet(list);
+    }
+
+    @Override
+    public boolean isLoadLatest() {
+        return !isLoadDataStarted;
     }
 
     @Override
     public void onRefreshStarted() {
+        isRefreshDataStarted = true;
         fetchData();
-        isRefreshDataInserted = false;
     }
 
     @Override
     public void onLoadStarted() {
+        isLoadDataStarted = true;
         fetchData();
-        isLoadDataInserted = false;
     }
 }

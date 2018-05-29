@@ -1,13 +1,13 @@
 ext {
     myself = [
-            multi_feature_recycler_view_lib_version: "0.0.2"
+            multi_feature_recycler_view_lib_version: "0.0.3"
     ]
     android = [
             compile_sdk_version: 27,
             build_tools_version: "27.0.3",
             target_sdk_version : 27,
             min_sdk_version    : 15,
-            version_code       : 201805281,
+            version_code       : 180528001,
             version_name       : "0.0.2"
     ]
 

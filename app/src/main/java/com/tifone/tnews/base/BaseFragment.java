@@ -24,6 +24,7 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void initView(View root);
     protected abstract void initViewData();
     protected abstract void fetchData();
+    public abstract void forceRefresh();
 
     public static Bundle setupBundle(String name) {
         Bundle bundle = new Bundle();

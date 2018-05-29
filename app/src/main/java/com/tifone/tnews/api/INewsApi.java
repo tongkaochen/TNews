@@ -6,4 +6,5 @@ package com.tifone.tnews.api;
 
 public interface INewsApi {
     String HOST = "http://toutiao.com/";
+    String BASE_URL = "https://is.snssdk.com/";
 }
