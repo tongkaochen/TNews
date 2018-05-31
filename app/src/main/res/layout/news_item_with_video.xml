@@ -35,12 +35,38 @@
                 android:text="这是新闻标题"
                 android:textStyle="bold" />
 
-            <VideoView
-                android:id="@+id/news_video"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/image_bg_color" />
+                android:layout_height="150dp">
+                <ImageView
+                    android:id="@+id/news_video_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/image_bg_color" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_32dp"
+                    android:background="@drawable/translucent_circle_bg"
+                    android:scaleType="center"/>
+                <TextView
+                    android:id="@+id/news_video_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/translucent_bg"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="10:01"/>
+            </RelativeLayout>
+
         </LinearLayout>
     </RelativeLayout>
 

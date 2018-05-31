@@ -39,6 +39,8 @@ dependencies {
     // Rxjava2
     implementation rootProject.ext.dependencies["rxjava"]
     implementation rootProject.ext.dependencies["rxandroid"]
+    // Rxbinding
+    implementation rootProject.ext.dependencies["rxbinding2"]
     // retrofit2.x
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["retrofit-adapter-rxjava2"]

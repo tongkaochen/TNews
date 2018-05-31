@@ -2,7 +2,6 @@ package com.tifone.tnews.home;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.tifone.mfrv.pullload.PullLoadRecyclerView;
@@ -10,8 +9,8 @@ import com.tifone.tnews.R;
 import com.tifone.tnews.adapter.HomePagerViewAdapter;
 import com.tifone.tnews.bean.home.HomeTestBean;
 import com.tifone.tnews.bean.news.MultiNewsArticleDataBean;
+import com.tifone.tnews.utils.DiffListCallback;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

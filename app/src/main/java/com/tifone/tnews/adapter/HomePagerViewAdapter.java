@@ -1,19 +1,26 @@
 package com.tifone.tnews.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.jakewharton.rxbinding2.view.RxView;
 import com.tifone.mfrv.pullload.adapter.CommonViewHolder;
 import com.tifone.mfrv.pullload.adapter.MultiItemsAdapter;
 import com.tifone.tnews.R;
 import com.tifone.tnews.bean.news.MultiNewsArticleDataBean;
 import com.tifone.tnews.image.ImageLoader;
 import com.tifone.tnews.utils.TimeUtils;
+
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.functions.Consumer;
 
 
 public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleDataBean> {
@@ -34,10 +41,10 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
         if (bean == null) {
             return VIEW_TYPE_ONLY_TEXT;
         }
-        if (!bean.isHas_image() && !bean.isHas_video()) {
+        if (!hasImage(bean) && !bean.isHas_video()) {
             // text content
             return VIEW_TYPE_ONLY_TEXT;
-        } else if (bean.isHas_image() && !bean.isHas_video()) {
+        } else if (hasImage(bean) && !bean.isHas_video()) {
             // with image content
             return VIEW_TYPE_WITH_IMAGE;
         } else if (bean.isHas_video()) {
@@ -45,6 +52,16 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
             return VIEW_TYPE_WITH_VIDEO;
         }
         return VIEW_TYPE_ONLY_TEXT;
+    }
+
+    private boolean hasImage(@NonNull MultiNewsArticleDataBean bean) {
+        if (bean.getLarge_image_list() != null && bean.getLarge_image_list().size() > 0) {
+            return true;
+        }
+        if (bean.getMiddle_image() != null && !TextUtils.isEmpty(bean.getMiddle_image().getUrl())) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -81,7 +98,24 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
                                     MultiNewsArticleDataBean bean) {
         logger("setupWithVideoItem");
         setupCommonItems(commonViewHolder, bean);
+        if (bean.getVideo_detail_info() != null) {
+            String url = bean.getVideo_detail_info().getDetail_video_large_image().getUrl();
+            //commonViewHolder.setImageResource(R.id.news_video_image, url);
+            ImageView videoImageView = commonViewHolder.getView(R.id.news_video_image);
+            ImageLoader.loadImageToView(mContext, url, videoImageView, R.color.image_bg_color);
+            int duration = bean.getVideo_duration();
+            int minute = duration / 60;
+            int second = duration % 60;
+            Log.e("tifone", "duration = " + duration);
+            commonViewHolder.setText(R.id.news_video_duration, formatTwo(minute) + ":" + formatTwo(second));
+        }
+    }
 
+    private String formatTwo(int input) {
+        if (0 <= input && input < 10) {
+            return "0" + String.valueOf(input);
+        }
+        return String.valueOf(input);
     }
 
     private void setupWithImageItem(CommonViewHolder commonViewHolder,
@@ -106,16 +140,12 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
         commonViewHolder.setText(R.id.news_summary, bean.getAbstractX());
     }
 
+    @SuppressLint("CheckResult")
     private void setupCommonItems(@NonNull CommonViewHolder commonViewHolder,
                                   @NonNull final MultiNewsArticleDataBean bean) {
         logger("setupCommonItems");
         CardView cardView = commonViewHolder.getView(R.id.home_item_card_view);
-        commonViewHolder.setOnClickListener(R.id.home_item_card_view, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, "Item " + bean.getTitle(), Toast.LENGTH_SHORT).show();
-            }
-        });
+
         ImageView userAvatarIv = commonViewHolder.getView(R.id.user_avatar_iv);
         // 设置头像信息
         if (bean.getMedia_info() != null) {
@@ -136,6 +166,15 @@ public class HomePagerViewAdapter extends MultiItemsAdapter<MultiNewsArticleData
                 .getString(R.string.news_header_title, source, comments, time));
 
         ImageView moreDotsIv = commonViewHolder.getView(R.id.more_dots);
+        RxView.clicks(cardView)
+                .throttleFirst(1, TimeUnit.SECONDS)
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+                        // click
+                        Toast.makeText(mContext, "Item " + bean.getTitle(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void logger(String msg) {

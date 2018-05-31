@@ -4,80 +4,78 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * Created by tongkao.chen on 2018/5/8.
- */
-
 public class MultiNewsArticleDataBean {
 
     /**
-     * abstract : 当地时间2018年5月7日，菲律宾奎松，第34届菲美“肩并肩”联合军演在菲律宾武装部队总部阿奎纳尔多军营开幕。
-     * action_extra : {"channel_id": 3189398996}
+     * abstract : 广西桂林经典电影《刘三姐》之舟妹发现了三姐给阿牛绣的绣球，追问三姐是不是给阿牛绣的，三姐不答，连说舟妹是个傻丫头，却被阿牛听到了，然后。。。
      * action_list : [{"action":1,"desc":"","extra":{}},{"action":3,"desc":"","extra":{}},{"action":7,"desc":"","extra":{}},{"action":9,"desc":"","extra":{}}]
      * aggr_type : 1
      * allow_download : false
      * article_sub_type : 0
      * article_type : 0
-     * article_url : https://m.thepaper.cn/newsDetail_forward_2117229
+     * article_url : http://toutiao.com/group/6551980209258627588/
      * ban_comment : 0
-     * behot_time : 1525757826
+     * behot_time : 1525684281
      * bury_count : 0
      * cell_flag : 262155
      * cell_layout_style : 1
      * cell_type : 0
-     * comment_count : 0
+     * comment_count : 1
      * content_decoration :
-     * cursor : 1525757826998
-     * digg_count : 0
-     * display_url : http://toutiao.com/group/6553081008881664516/
-     * filter_words : [{"id":"8:0","is_selected":false,"name":"看过了"},{"id":"9:1","is_selected":false,"name":"内容太水"},{"id":"5:31336367","is_selected":false,"name":"拉黑作者:澎湃新闻"},{"id":"2:11384975","is_selected":false,"name":"不想看:环球军事"},{"id":"6:16436","is_selected":false,"name":"不想看:菲律宾"}]
+     * cursor : 1525684281000
+     * digg_count : 5
+     * display_url : http://toutiao.com/group/6551980209258627588/
+     * filter_words : [{"id":"8:0","is_selected":false,"name":"看过了"},{"id":"9:1","is_selected":false,"name":"内容太水"},{"id":"5:2206507701","is_selected":false,"name":"拉黑作者:桂林眼镜哥哥"},{"id":"1:307227094","is_selected":false,"name":"不想看:文化视频"},{"id":"6:2559241","is_selected":false,"name":"不想看:刘三姐"},{"id":"6:23799","is_selected":false,"name":"不想看:桂林"}]
      * forward_info : {"forward_count":1}
-     * gallary_image_count : 1
-     * group_id : 6553081008881664516
-     * has_image : true
+     * group_flags : 32832
+     * group_id : 6551980209258627588
      * has_m3u8_video : false
      * has_mp4_video : 0
-     * has_video : false
+     * has_video : true
      * hot : 0
      * ignore_web_transform : 1
      * is_subject : false
-     * item_id : 6553081008881664516
+     * item_id : 6551980209258627588
      * item_version : 0
-     * keywords : 马拉维,菲律宾,杜特尔特,美菲,肩并肩
+     * keywords : 经典电影,刘三姐,阿牛绣,傻丫头,广西,舟妹
+     * large_image_list : [{"height":326,"uri":"video1609/806200141de31c9cf228","url":"http://p1.pstatp.com/video1609/806200141de31c9cf228","url_list":[{"url":"http://p1.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb3.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb9.pstatp.com/video1609/806200141de31c9cf228"}],"width":580}]
      * level : 0
-     * log_pb : {"impr_id":"2018050813515801002007807136718B"}
-     * media_info : {"avatar_url":"http://p1.pstatp.com/large/d290013b7aaaabcfff2","follow":false,"is_star_user":false,"media_id":51045089537,"name":"澎湃新闻","recommend_reason":"","recommend_type":0,"user_id":51045089537,"user_verified":true,"verified_content":""}
-     * media_name : 澎湃新闻
-     * middle_image : {"height":337,"uri":"list/pgc-image/15257580688074668cecec7","url":"http://p9.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp","url_list":[{"url":"http://p9.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"},{"url":"http://pb1.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"},{"url":"http://pb3.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"}],"width":600}
-     * need_client_impr_recycle : 0
-     * publish_time : 1525758069
-     * read_count : 111
-     * rid : 20180508140734010008019216957159
-     * share_count : 0
-     * share_info : {"cover_image":null,"description":null,"share_type":{"pyq":2,"qq":0,"qzone":0,"wx":0},"share_url":"http://m.toutiao.com/group/6553081008881664516/?iid=5034850950&app=news_article","title":"美菲\u201c肩并肩\u201d军演规模恢复：菲律宾接近中俄的同时与美合作"}
-     * share_url : http://m.toutiao.com/group/6553081008881664516/?iid=5034850950&app=news_article
+     * log_pb : {"impr_id":"201805071711210100080192003762DC"}
+     * media_info : {"avatar_url":"http://p9.pstatp.com/large/616a0003efce3a981610","follow":false,"is_star_user":false,"media_id":1576323397866510,"name":"桂林眼镜哥哥","recommend_reason":"","recommend_type":0,"user_id":51018325177,"user_verified":false,"verified_content":""}
+     * media_name : 桂林眼镜哥哥
+     * middle_image : {"height":360,"uri":"list/806200141de31c9cf228","url":"http://p1.pstatp.com/list/300x196/806200141de31c9cf228.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/806200141de31c9cf228.webp"},{"url":"http://pb3.pstatp.com/list/300x196/806200141de31c9cf228.webp"},{"url":"http://pb9.pstatp.com/list/300x196/806200141de31c9cf228.webp"}],"width":640}
+     * need_client_impr_recycle : 1
+     * publish_time : 1525501769
+     * read_count : 51
+     * rid : 201805071711210100080192003762DC
+     * share_count : 2
+     * share_info : {"cover_image":null,"description":null,"share_type":{"pyq":2,"qq":0,"qzone":0,"wx":0},"share_url":"http://m.toutiao.com/a6551980209258627588/?iid=12507202490&app=news_article","title":"广西桂林经典电影《刘三姐》之舟妹发现了三姐给阿牛绣的绣球"}
+     * share_type : 2
+     * share_url : http://m.toutiao.com/a6551980209258627588/?iid=12507202490&app=news_article
      * show_dislike : true
      * show_portrait : false
      * show_portrait_article : false
-     * source : 澎湃新闻
+     * source : 桂林眼镜哥哥
      * source_icon_style : 2
-     * source_open_url : sslocal://profile?uid=51045089537
-     * tag : news_world
-     * tag_id : 6553081008881664516
+     * source_open_url : sslocal://profile?refer=video&uid=51018325177
+     * tag : video_culture
+     * tag_id : 6551980209258627588
      * tip : 0
-     * title : 美菲“肩并肩”军演规模恢复：菲律宾接近中俄的同时与美合作
-     * ugc_recommend : {"activity":"","reason":"澎湃新闻官方帐号"}
-     * url : https://m.thepaper.cn/newsDetail_forward_2117229
-     * user_info : {"avatar_url":"http://p3.pstatp.com/thumb/d290013b7aaaabcfff2","description":"专注时政与思想的媒体开放平台","follow":false,"follower_count":0,"name":"澎湃新闻","user_auth_info":"{\"auth_type\": \"0\", \"auth_info\": \"澎湃新闻官方帐号\"}","user_id":51045089537,"user_verified":true,"verified_content":"澎湃新闻官方帐号"}
+     * title : 广西桂林经典电影《刘三姐》之舟妹发现了三姐给阿牛绣的绣球
+     * ugc_recommend : {"activity":"","reason":""}
+     * url : http://toutiao.com/group/6551980209258627588/
+     * user_info : {"avatar_url":"http://p9.pstatp.com/thumb/616a0003efce3a981610","description":"关注桂林眼镜哥哥，带您游最美的桂林。","follow":false,"follower_count":0,"name":"桂林眼镜哥哥","user_id":51018325177,"user_verified":false}
      * user_repin : 0
-     * user_verified : 1
-     * verified_content : 澎湃新闻官方帐号
+     * user_verified : 0
+     * verified_content :
+     * video_detail_info : {"detail_video_large_image":{"height":326,"uri":"video1609/806200141de31c9cf228","url":"http://p1.pstatp.com/video1609/806200141de31c9cf228","url_list":[{"url":"http://p1.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb3.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb9.pstatp.com/video1609/806200141de31c9cf228"}],"width":580},"direct_play":1,"group_flags":32832,"show_pgc_subscribe":1,"video_id":"v02004bd0000bbmkmmmlg9jt2h22402g","video_preloading_flag":1,"video_type":0,"video_watch_count":51,"video_watching_count":0}
+     * video_duration : 599
+     * video_id : v02004bd0000bbmkmmmlg9jt2h22402g
      * video_style : 0
      */
 
     @SerializedName("abstract")
     private String abstractX;
-    private String action_extra;
     private int aggr_type;
     private boolean allow_download;
     private int article_sub_type;
@@ -95,9 +93,8 @@ public class MultiNewsArticleDataBean {
     private int digg_count;
     private String display_url;
     private ForwardInfoBean forward_info;
-    private int gallary_image_count;
+    private int group_flags;
     private long group_id;
-    private boolean has_image;
     private boolean has_m3u8_video;
     private int has_mp4_video;
     private boolean has_video;
@@ -118,6 +115,7 @@ public class MultiNewsArticleDataBean {
     private String rid;
     private int share_count;
     private ShareInfoBean share_info;
+    private int share_type;
     private String share_url;
     private boolean show_dislike;
     private boolean show_portrait;
@@ -135,9 +133,13 @@ public class MultiNewsArticleDataBean {
     private int user_repin;
     private int user_verified;
     private String verified_content;
+    private VideoDetailInfoBean video_detail_info;
+    private int video_duration;
+    private String video_id;
     private int video_style;
     private List<ActionListBean> action_list;
     private List<FilterWordsBean> filter_words;
+    private List<LargeImageListBean> large_image_list;
 
     public String getAbstractX() {
         return abstractX;
@@ -145,14 +147,6 @@ public class MultiNewsArticleDataBean {
 
     public void setAbstractX(String abstractX) {
         this.abstractX = abstractX;
-    }
-
-    public String getAction_extra() {
-        return action_extra;
-    }
-
-    public void setAction_extra(String action_extra) {
-        this.action_extra = action_extra;
     }
 
     public int getAggr_type() {
@@ -291,12 +285,12 @@ public class MultiNewsArticleDataBean {
         this.forward_info = forward_info;
     }
 
-    public int getGallary_image_count() {
-        return gallary_image_count;
+    public int getGroup_flags() {
+        return group_flags;
     }
 
-    public void setGallary_image_count(int gallary_image_count) {
-        this.gallary_image_count = gallary_image_count;
+    public void setGroup_flags(int group_flags) {
+        this.group_flags = group_flags;
     }
 
     public long getGroup_id() {
@@ -305,14 +299,6 @@ public class MultiNewsArticleDataBean {
 
     public void setGroup_id(long group_id) {
         this.group_id = group_id;
-    }
-
-    public boolean isHas_image() {
-        return has_image;
-    }
-
-    public void setHas_image(boolean has_image) {
-        this.has_image = has_image;
     }
 
     public boolean isHas_m3u8_video() {
@@ -475,6 +461,14 @@ public class MultiNewsArticleDataBean {
         this.share_info = share_info;
     }
 
+    public int getShare_type() {
+        return share_type;
+    }
+
+    public void setShare_type(int share_type) {
+        this.share_type = share_type;
+    }
+
     public String getShare_url() {
         return share_url;
     }
@@ -611,6 +605,30 @@ public class MultiNewsArticleDataBean {
         this.verified_content = verified_content;
     }
 
+    public VideoDetailInfoBean getVideo_detail_info() {
+        return video_detail_info;
+    }
+
+    public void setVideo_detail_info(VideoDetailInfoBean video_detail_info) {
+        this.video_detail_info = video_detail_info;
+    }
+
+    public int getVideo_duration() {
+        return video_duration;
+    }
+
+    public void setVideo_duration(int video_duration) {
+        this.video_duration = video_duration;
+    }
+
+    public String getVideo_id() {
+        return video_id;
+    }
+
+    public void setVideo_id(String video_id) {
+        this.video_id = video_id;
+    }
+
     public int getVideo_style() {
         return video_style;
     }
@@ -635,6 +653,14 @@ public class MultiNewsArticleDataBean {
         this.filter_words = filter_words;
     }
 
+    public List<LargeImageListBean> getLarge_image_list() {
+        return large_image_list;
+    }
+
+    public void setLarge_image_list(List<LargeImageListBean> large_image_list) {
+        this.large_image_list = large_image_list;
+    }
+
     public static class ForwardInfoBean {
         /**
          * forward_count : 1
@@ -653,7 +679,7 @@ public class MultiNewsArticleDataBean {
 
     public static class LogPbBean {
         /**
-         * impr_id : 2018050813515801002007807136718B
+         * impr_id : 201805071711210100080192003762DC
          */
 
         private String impr_id;
@@ -669,15 +695,15 @@ public class MultiNewsArticleDataBean {
 
     public static class MediaInfoBean {
         /**
-         * avatar_url : http://p1.pstatp.com/large/d290013b7aaaabcfff2
+         * avatar_url : http://p9.pstatp.com/large/616a0003efce3a981610
          * follow : false
          * is_star_user : false
-         * media_id : 51045089537
-         * name : 澎湃新闻
+         * media_id : 1576323397866510
+         * name : 桂林眼镜哥哥
          * recommend_reason :
          * recommend_type : 0
-         * user_id : 51045089537
-         * user_verified : true
+         * user_id : 51018325177
+         * user_verified : false
          * verified_content :
          */
 
@@ -775,11 +801,11 @@ public class MultiNewsArticleDataBean {
 
     public static class MiddleImageBean {
         /**
-         * height : 337
-         * uri : list/pgc-image/15257580688074668cecec7
-         * url : http://p9.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp
-         * url_list : [{"url":"http://p9.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"},{"url":"http://pb1.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"},{"url":"http://pb3.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp"}]
-         * width : 600
+         * height : 360
+         * uri : list/806200141de31c9cf228
+         * url : http://p1.pstatp.com/list/300x196/806200141de31c9cf228.webp
+         * url_list : [{"url":"http://p1.pstatp.com/list/300x196/806200141de31c9cf228.webp"},{"url":"http://pb3.pstatp.com/list/300x196/806200141de31c9cf228.webp"},{"url":"http://pb9.pstatp.com/list/300x196/806200141de31c9cf228.webp"}]
+         * width : 640
          */
 
         private int height;
@@ -830,7 +856,7 @@ public class MultiNewsArticleDataBean {
 
         public static class UrlListBean {
             /**
-             * url : http://p9.pstatp.com/list/300x196/pgc-image/15257580688074668cecec7.webp
+             * url : http://p1.pstatp.com/list/300x196/806200141de31c9cf228.webp
              */
 
             private String url;
@@ -850,8 +876,8 @@ public class MultiNewsArticleDataBean {
          * cover_image : null
          * description : null
          * share_type : {"pyq":2,"qq":0,"qzone":0,"wx":0}
-         * share_url : http://m.toutiao.com/group/6553081008881664516/?iid=5034850950&app=news_article
-         * title : 美菲“肩并肩”军演规模恢复：菲律宾接近中俄的同时与美合作
+         * share_url : http://m.toutiao.com/a6551980209258627588/?iid=12507202490&app=news_article
+         * title : 广西桂林经典电影《刘三姐》之舟妹发现了三姐给阿牛绣的绣球
          */
 
         private Object cover_image;
@@ -950,7 +976,7 @@ public class MultiNewsArticleDataBean {
     public static class UgcRecommendBean {
         /**
          * activity :
-         * reason : 澎湃新闻官方帐号
+         * reason :
          */
 
         private String activity;
@@ -975,15 +1001,13 @@ public class MultiNewsArticleDataBean {
 
     public static class UserInfoBean {
         /**
-         * avatar_url : http://p3.pstatp.com/thumb/d290013b7aaaabcfff2
-         * description : 专注时政与思想的媒体开放平台
+         * avatar_url : http://p9.pstatp.com/thumb/616a0003efce3a981610
+         * description : 关注桂林眼镜哥哥，带您游最美的桂林。
          * follow : false
          * follower_count : 0
-         * name : 澎湃新闻
-         * user_auth_info : {"auth_type": "0", "auth_info": "澎湃新闻官方帐号"}
-         * user_id : 51045089537
-         * user_verified : true
-         * verified_content : 澎湃新闻官方帐号
+         * name : 桂林眼镜哥哥
+         * user_id : 51018325177
+         * user_verified : false
          */
 
         private String avatar_url;
@@ -991,10 +1015,8 @@ public class MultiNewsArticleDataBean {
         private boolean follow;
         private int follower_count;
         private String name;
-        private String user_auth_info;
         private long user_id;
         private boolean user_verified;
-        private String verified_content;
 
         public String getAvatar_url() {
             return avatar_url;
@@ -1036,14 +1058,6 @@ public class MultiNewsArticleDataBean {
             this.name = name;
         }
 
-        public String getUser_auth_info() {
-            return user_auth_info;
-        }
-
-        public void setUser_auth_info(String user_auth_info) {
-            this.user_auth_info = user_auth_info;
-        }
-
         public long getUser_id() {
             return user_id;
         }
@@ -1059,13 +1073,173 @@ public class MultiNewsArticleDataBean {
         public void setUser_verified(boolean user_verified) {
             this.user_verified = user_verified;
         }
+    }
 
-        public String getVerified_content() {
-            return verified_content;
+    public static class VideoDetailInfoBean {
+        /**
+         * detail_video_large_image : {"height":326,"uri":"video1609/806200141de31c9cf228","url":"http://p1.pstatp.com/video1609/806200141de31c9cf228","url_list":[{"url":"http://p1.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb3.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb9.pstatp.com/video1609/806200141de31c9cf228"}],"width":580}
+         * direct_play : 1
+         * group_flags : 32832
+         * show_pgc_subscribe : 1
+         * video_id : v02004bd0000bbmkmmmlg9jt2h22402g
+         * video_preloading_flag : 1
+         * video_type : 0
+         * video_watch_count : 51
+         * video_watching_count : 0
+         */
+
+        private DetailVideoLargeImageBean detail_video_large_image;
+        private int direct_play;
+        private int group_flags;
+        private int show_pgc_subscribe;
+        private String video_id;
+        private int video_preloading_flag;
+        private int video_type;
+        private int video_watch_count;
+        private int video_watching_count;
+
+        public DetailVideoLargeImageBean getDetail_video_large_image() {
+            return detail_video_large_image;
         }
 
-        public void setVerified_content(String verified_content) {
-            this.verified_content = verified_content;
+        public void setDetail_video_large_image(DetailVideoLargeImageBean detail_video_large_image) {
+            this.detail_video_large_image = detail_video_large_image;
+        }
+
+        public int getDirect_play() {
+            return direct_play;
+        }
+
+        public void setDirect_play(int direct_play) {
+            this.direct_play = direct_play;
+        }
+
+        public int getGroup_flags() {
+            return group_flags;
+        }
+
+        public void setGroup_flags(int group_flags) {
+            this.group_flags = group_flags;
+        }
+
+        public int getShow_pgc_subscribe() {
+            return show_pgc_subscribe;
+        }
+
+        public void setShow_pgc_subscribe(int show_pgc_subscribe) {
+            this.show_pgc_subscribe = show_pgc_subscribe;
+        }
+
+        public String getVideo_id() {
+            return video_id;
+        }
+
+        public void setVideo_id(String video_id) {
+            this.video_id = video_id;
+        }
+
+        public int getVideo_preloading_flag() {
+            return video_preloading_flag;
+        }
+
+        public void setVideo_preloading_flag(int video_preloading_flag) {
+            this.video_preloading_flag = video_preloading_flag;
+        }
+
+        public int getVideo_type() {
+            return video_type;
+        }
+
+        public void setVideo_type(int video_type) {
+            this.video_type = video_type;
+        }
+
+        public int getVideo_watch_count() {
+            return video_watch_count;
+        }
+
+        public void setVideo_watch_count(int video_watch_count) {
+            this.video_watch_count = video_watch_count;
+        }
+
+        public int getVideo_watching_count() {
+            return video_watching_count;
+        }
+
+        public void setVideo_watching_count(int video_watching_count) {
+            this.video_watching_count = video_watching_count;
+        }
+
+        public static class DetailVideoLargeImageBean {
+            /**
+             * height : 326
+             * uri : video1609/806200141de31c9cf228
+             * url : http://p1.pstatp.com/video1609/806200141de31c9cf228
+             * url_list : [{"url":"http://p1.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb3.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb9.pstatp.com/video1609/806200141de31c9cf228"}]
+             * width : 580
+             */
+
+            private int height;
+            private String uri;
+            private String url;
+            private int width;
+            private List<UrlListBeanX> url_list;
+
+            public int getHeight() {
+                return height;
+            }
+
+            public void setHeight(int height) {
+                this.height = height;
+            }
+
+            public String getUri() {
+                return uri;
+            }
+
+            public void setUri(String uri) {
+                this.uri = uri;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public int getWidth() {
+                return width;
+            }
+
+            public void setWidth(int width) {
+                this.width = width;
+            }
+
+            public List<UrlListBeanX> getUrl_list() {
+                return url_list;
+            }
+
+            public void setUrl_list(List<UrlListBeanX> url_list) {
+                this.url_list = url_list;
+            }
+
+            public static class UrlListBeanX {
+                /**
+                 * url : http://p1.pstatp.com/video1609/806200141de31c9cf228
+                 */
+
+                private String url;
+
+                public String getUrl() {
+                    return url;
+                }
+
+                public void setUrl(String url) {
+                    this.url = url;
+                }
+            }
         }
     }
 
@@ -1144,6 +1318,78 @@ public class MultiNewsArticleDataBean {
         }
     }
 
+    public static class LargeImageListBean {
+        /**
+         * height : 326
+         * uri : video1609/806200141de31c9cf228
+         * url : http://p1.pstatp.com/video1609/806200141de31c9cf228
+         * url_list : [{"url":"http://p1.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb3.pstatp.com/video1609/806200141de31c9cf228"},{"url":"http://pb9.pstatp.com/video1609/806200141de31c9cf228"}]
+         * width : 580
+         */
+
+        private int height;
+        private String uri;
+        private String url;
+        private int width;
+        private List<UrlListBeanXX> url_list;
+
+        public int getHeight() {
+            return height;
+        }
+
+        public void setHeight(int height) {
+            this.height = height;
+        }
+
+        public String getUri() {
+            return uri;
+        }
+
+        public void setUri(String uri) {
+            this.uri = uri;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
+        public void setWidth(int width) {
+            this.width = width;
+        }
+
+        public List<UrlListBeanXX> getUrl_list() {
+            return url_list;
+        }
+
+        public void setUrl_list(List<UrlListBeanXX> url_list) {
+            this.url_list = url_list;
+        }
+
+        public static class UrlListBeanXX {
+            /**
+             * url : http://p1.pstatp.com/video1609/806200141de31c9cf228
+             */
+
+            private String url;
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+        }
+    }
+
     @Override
     public int hashCode() {
         return (int) item_id;
@@ -1151,7 +1397,10 @@ public class MultiNewsArticleDataBean {
 
     @Override
     public boolean equals(Object obj) {
-        MultiNewsArticleDataBean bean = (MultiNewsArticleDataBean) obj;
-        return bean.getItem_id() == item_id && bean.hashCode() == hashCode();
+        if (obj instanceof MultiNewsArticleDataBean) {
+            MultiNewsArticleDataBean bean = (MultiNewsArticleDataBean) obj;
+            return bean.getItem_id() == item_id && bean.hashCode() == hashCode();
+        }
+        return false;
     }
 }
