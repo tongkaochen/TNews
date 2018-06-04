@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+// Implement with Kotlin language
 android {
     compileSdkVersion rootProject.ext.android.compile_sdk_version
     buildToolsVersion rootProject.ext.android.build_tools_version
