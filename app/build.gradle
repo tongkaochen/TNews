@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 // Implement with Kotlin language
 android {
     compileSdkVersion rootProject.ext.android.compile_sdk_version
@@ -17,12 +19,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        // 使编译系统识别添加的kotlin文件夹
+        main.java.srcDirs += "src/main/kotlin"
+    }
 }
 
 repositories {
     flatDir {
         dirs 'libs'
     }
+    mavenCentral()
 }
 
 dependencies {
@@ -52,7 +59,8 @@ dependencies {
 
     // Glide
     implementation rootProject.ext.dependencies["glide"]
-    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    // GlideApp 要使用kapt才能正确解析
+    kapt rootProject.ext.dependencies["glide-compiler"]
 
     // my RecyclerView lib
     implementation (name : "multi-feature-recyclerview-${rootProject.ext.myself.multi_feature_recycler_view_lib_version}", ext: "aar")
@@ -61,4 +69,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

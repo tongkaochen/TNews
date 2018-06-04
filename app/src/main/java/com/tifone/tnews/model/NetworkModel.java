@@ -1,7 +1,11 @@
 package com.tifone.tnews.model;
 
+import android.annotation.SuppressLint;
+
 import com.tifone.tnews.base.IModel;
 import com.tifone.tnews.bean.home.HomeTestBean;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +32,7 @@ public class NetworkModel implements IModel {
         return Singleton.INSTANCE;
     }
 
+    @SuppressLint("CheckResult")
     @Override
     public void loadData(final OnDataLoadedCallback<HomeTestBean> callback) {
 
